@@ -47,7 +47,7 @@ jobs:
         with:
           severity: info
           username: PokeDexBuildBot
-          avatarUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
+          avatarUrl: https://github.com/apndx/ScentGraph/blob/master/src/client/assets/eye.jpg
           text: A new version of Pokedex deployed
           description: To https://apndx-pokedex.herokuapp.com/ by ${{ github.actor }}
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
@@ -56,8 +56,9 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1
         with:
           severity: error
+          color: '#ff00aa'
           username: PokeDexBuildBot
-          avatarUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
+          avatarUrl: https://github.com/apndx/ScentGraph/blob/master/src/client/assets/eye.jpg
           text: Build failed
           description: Commits 
           details: ${{ toJson(github.event.commits.*.url) }}
