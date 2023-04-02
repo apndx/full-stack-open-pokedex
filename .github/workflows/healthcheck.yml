@@ -2,7 +2,8 @@ name: Health check
 
 on:
   schedule:
-    - cron: '0,15,30,45 13,14,15 * * *' # every every 15 mins between 13-15:45
+    #- cron: '0,15,30,45 13,14,15 * * *' # every every 15 mins between 13-15:45 GMT
+    - cron: '15,30 17 * * *' # 17:15 and 17:30
 
 jobs:
   health_check:
